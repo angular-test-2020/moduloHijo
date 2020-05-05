@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListRoutesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('constructor');
+  }
 
   ngOnInit(): void {
+    console.log('ngOnInit');
+  }
+
+  miFuncion() {
+    console.log('Mi boton');
   }
 
 }
