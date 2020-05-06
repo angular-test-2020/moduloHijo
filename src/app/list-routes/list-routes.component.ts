@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-list-routes',
@@ -7,16 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListRoutesComponent implements OnInit {
 
-  constructor() {
-    console.log('constructor');
+  constructor(private route: Router) {
+    console.log(route);
   }
 
   ngOnInit(): void {
+    console.log(this.route.config.filter(value => value.data.id === 'Liberia1' || value.data.id === 'Liberia2'));
+    // console.log(array);
     console.log('ngOnInit');
   }
 
-  miFuncion() {
-    console.log('Mi boton');
+  miFuncion1() {
+    this.route.navigate(['/page1']);
+  }
+
+  miFuncion2() {
+    this.route.navigate(['/page2']);
   }
 
 }
