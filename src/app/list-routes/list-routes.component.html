@@ -1,7 +1,12 @@
 <p>list-routes works!</p>
 
-<button (click)="miFuncion1()">Page 1</button>
-<button (click)="miFuncion2()">Page 2</button>
+<nav>
+  <ul>
+    <li *ngFor="let ruta of rutas">
+      <a routerLink="{{ ruta.path }}" routerLinkActive="active">{{ ruta.path }}</a>
+    </li>
+  </ul>
+</nav>
 
 <router-outlet></router-outlet>
 

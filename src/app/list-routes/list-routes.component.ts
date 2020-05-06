@@ -8,13 +8,15 @@ import {Router} from '@angular/router';
 })
 export class ListRoutesComponent implements OnInit {
 
+  rutas: any;
+
   constructor(private route: Router) {
+    this.rutas = this.route.config.filter(value => value.data.id === 'Liberia1' || value.data.id === 'Liberia2');
     console.log(route);
   }
 
   ngOnInit(): void {
-    console.log(this.route.config.filter(value => value.data.id === 'Liberia1' || value.data.id === 'Liberia2'));
-    // console.log(array);
+    console.log(this.rutas);
     console.log('ngOnInit');
   }
 
