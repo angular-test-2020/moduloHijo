@@ -24,8 +24,8 @@
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2",
-    "prueba-concepto-libreria": "0.0.13",
-    "prueba-concepto-libreria-dos": "0.0.2"
+    "prueba-concepto-libreria": "0.0.14",
+    "prueba-concepto-libreria-dos": "0.0.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.4",
