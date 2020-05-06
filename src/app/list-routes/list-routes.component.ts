@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {Router, Route} from '@angular/router';
 
 @Component({
   selector: 'app-list-routes',
@@ -10,13 +10,16 @@ export class ListRoutesComponent implements OnInit {
 
   rutas: any;
 
+
   constructor(private route: Router) {
-    this.rutas = this.route.config.filter(value => value.data.id === 'Liberia1' || value.data.id === 'Liberia2');
-    console.log(route);
+    const usuarios = [{ 'nombre': 'userTest1', 'permisos': ['Liberia1', 'Liberia2' ]}, { 'nombre': 'userTest2', 'permisos': ['Liberia2']}];
+    const usuario = usuarios[1];
+
+    this.rutas = this.route.config.filter(value => usuario.permisos.includes(value.data.id));
   }
 
   ngOnInit(): void {
-    console.log(this.rutas);
+    //console.log(this.rutas);
     console.log('ngOnInit');
   }
 
